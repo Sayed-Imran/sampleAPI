@@ -1,15 +1,11 @@
 from fastapi import FastAPI, Request
 from jinja2 import FileSystemLoader, Environment
-from starlette.responses import StreamingResponse
 import httpx
 from dotenv import load_dotenv
 load_dotenv()
 from schema import Image
 from typing import List
 from config import API_Key
-import requests
-from PIL import Image
-from io import BytesIO
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
